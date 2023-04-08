@@ -4,7 +4,10 @@ import router from "./router";
 
 // import tailwind
 import "./assets/style/tailwind.css";
-
 import "./assets/style/global.css";
+import { registerGlobalComponents } from "./utils/import";
 
-createApp(App).use(router).mount("#app");
+const app = createApp(App);
+registerGlobalComponents(app);
+app.use(router);
+app.mount("#app");
