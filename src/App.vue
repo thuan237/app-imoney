@@ -1,7 +1,5 @@
 <template>
-  <!-- test pull request 1-->
-  <!-- test pull request 2-->
-  <!-- test pull request 3-->
+  <!-- test pull request 4-->
   <component :is="layout">
     <!-- hien thi du lieu trong component theo tung router, khi go home thi direct toi home -->
     <router-view />
