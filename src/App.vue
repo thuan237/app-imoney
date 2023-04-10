@@ -1,4 +1,5 @@
 <template>
+  <!-- test pull request -->
   <component :is="layout">
     <!-- hien thi du lieu trong component theo tung router, khi go home thi direct toi home -->
     <router-view />
