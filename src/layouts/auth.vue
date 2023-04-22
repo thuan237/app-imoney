@@ -1,7 +1,12 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="bo-cuc-auth">
-    <h1>Auth layout</h1>
-    <slot />
-  </div>
+  <NavigationBrand />
+  <slot />
 </template>
+
+<script>
+import NavigationBrand from "@/components/NavigationBrand.vue";
+export default {
+  components: { NavigationBrand },
+};
+</script>
