@@ -15,12 +15,14 @@
     </div>
 
     <div data-circle class="absolute top-0 left-1/2 -translate-x-1/2"></div>
-    <div
-      data-circle-inset
-      class="absolute flex items-center justify-center bg-primary text-white w-12 h-12 rounded-full cursor-pointer -top-6 left-1/2 -translate-x-1/2"
-    >
-      <i class="t2ico t2ico-plus"></i>
-    </div>
+    <router-link :to="{ name: 'newTransaction', params: {} }">
+      <div
+        data-circle-inset
+        class="absolute flex items-center justify-center bg-primary text-white w-12 h-12 rounded-full cursor-pointer -top-6 left-1/2 -translate-x-1/2"
+      >
+        <i class="t2ico t2ico-plus"></i>
+      </div>
+    </router-link>
   </footer>
 </template>
 

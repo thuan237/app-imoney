@@ -1,6 +1,6 @@
 <template>
   <header id="header" class="py-8">
-    <div class="container mx-auto px-8">
+    <div class="container mx-auto px-8" v-if="meta.leading">
       <div class="flex justify-between items-center">
         <div class="flex items-center">
           <div class="w-10 h-10 overflow-hidden rounded-full">
@@ -11,7 +11,7 @@
               class="w-full h-auto object-cover"
             />
           </div>
-          <h1 class="text-xl font-bold text-dark ml-2">Hey, Thuan Nguyen</h1>
+          <h1 class="text-xl font-bold text-dark ml-2">{{ meta.text }}</h1>
         </div>
         <div class="flex items-center">
           <ul>
@@ -24,3 +24,15 @@
     </div>
   </header>
 </template>
+<script>
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+export default {
+  setup() {
+    const route = useRoute();
+    return {
+      meta: computed(() => route.meta),
+    };
+  },
+};
+</script>

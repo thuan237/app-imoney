@@ -4,6 +4,9 @@ const routes = [
   {
     path: "/",
     name: "Home",
+    meta: {
+      isShowFooter: true,
+    },
     component: () =>
       import(/* webpackChunkName: "home" */ "../views/index.vue"),
   },
@@ -30,9 +33,26 @@ const routes = [
   {
     path: "/profile",
     name: "profile",
+    meta: {
+      leading: true,
+      text: "Hi, Thuan Nguyen",
+      isShowFooter: true,
+    },
     component: () =>
       // giúp chúng ta khi gọi tới cái view này mới được load ra chứ ko load ra ngay từ đầu, làm cho hệ thống nhanh hơn
       import(/* webpackChunkName: "register" */ "../views/profile.vue"),
+  },
+  {
+    path: "/new-transaction",
+    name: "newTransaction",
+    meta: {
+      text: "New Transaction",
+      leading: true,
+      isShowFooter: false,
+    },
+    component: () =>
+      // giúp chúng ta khi gọi tới cái view này mới được load ra chứ ko load ra ngay từ đầu, làm cho hệ thống nhanh hơn
+      import(/* webpackChunkName: "register" */ "../views/new-transaction.vue"),
   },
 ];
 
