@@ -27,6 +27,13 @@ const routes = [
       // giúp chúng ta khi gọi tới cái view này mới được load ra chứ ko load ra ngay từ đầu, làm cho hệ thống nhanh hơn
       import(/* webpackChunkName: "register" */ "../views/login.vue"),
   },
+  {
+    path: "/profile",
+    name: "profile",
+    component: () =>
+      // giúp chúng ta khi gọi tới cái view này mới được load ra chứ ko load ra ngay từ đầu, làm cho hệ thống nhanh hơn
+      import(/* webpackChunkName: "register" */ "../views/profile.vue"),
+  },
 ];
 
 const router = createRouter({
